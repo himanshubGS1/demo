@@ -1,0 +1,37 @@
+{
+  "name": "connection-orderer",
+  "version": "1.0.0",
+  "client": {
+    "organization": "OrdererOrg",
+    "connection": {
+      "timeout": {
+        "orderer": "300"
+      }
+    }
+  },
+  "channels": {
+    "mychannel": {
+      "orderers": [
+        "orderer.example.com"
+      ]
+    }
+  },
+  "organizations": {
+    "OrdererOrg": {
+      "mspid": "OrdererMSP",
+      "peers": []
+    }
+  },
+  "orderers": {
+    "orderer.example.com": {
+      "url": "grpcs://localhost:7050",
+      "tlsCACerts": {
+        "path": "../../organizations/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt"
+      },
+      "grpcOptions": {
+        "ssl-target-name-override": "orderer.example.com",
+        "hostnameOverride": "orderer.example.com"
+      }
+    }
+  }
+}

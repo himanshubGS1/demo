@@ -59,7 +59,7 @@ services:
       - 9443:9443
     networks:
       - test
-
+  
   orderer2.example.com:
     container_name: orderer2.example.com
     image: hyperledger/fabric-orderer:latest

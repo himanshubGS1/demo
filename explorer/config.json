@@ -1,0 +1,14 @@
+{
+  "network-configs": {
+    "mychannel": {
+      "name": "mychannel",
+      "profile": "./connection-profile/test-network.json",
+      "orderer": "connection-orderer",
+      "channel": "mychannel",
+      "bootMode": "ALL",
+      "noOfBlocks": 0,
+      "enableAuthentication": false
+    }
+  },
+  "license": "Apache-2.0"
+}
